@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/output.css">
+    <title>Task Management</title>
+</head>
+<body>
+
+    <main class="flex justify-center items-center h-screen bg-gray-100">
+    <div class="flex flex-col gap-3 bg-white shadow-lg p-4 rounded-lg min-w-min h-[70%]">
+        <h1 class="text-3xl font-bold">Task Management</h1>
+        <div class="flex items-center gap-2">
+            <input type="text" id="taskInput" class="p-2 border rounded-lg" placeholder="Enter a task...">
+            <div class="relative inline-block text-left">
+                <button id="filterTaskBtn" class="bg-blue-500 text-white p-2 rounded" type="button" aria-haspopup="true" aria-expanded="false">
+                    Task Filter
+                    <i class='bx bx-down-arrow ml-2'></i>
+                </button>
+                <div id="filterTaskDropdown" class="hidden absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1" role="menu" aria-orientation="vertical" aria-labelledby="filterTaskBtn">
+                    <a href="#" id="filterAll" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">All</a>
+                    <a href="#" id="filterCompleted" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Selesai</a>
+                    <a href="#" id="filterNotCompleted" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Belum Selesai</a>
+                </div>
+            </div>
+            <button id="addTaskBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                <i class='bx bx-plus'></i> Add Task
+            </button>
+            <button id="deleteAllBtn" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                Delete All
+            </button>
+        </div>
+        <ul id="taskList" class="mt-4 space-y-2 p-5 overflow-x-auto">
+            <!-- Task items will appear here -->
+             <!-- <ul class="bg-white p-4 rounded shadow-lg flex justify-between items-center">
+                <div class="flex items-center">
+                    <span class="text-gray-800">Kepasang</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <button class="bg-green-100 hover:bg-green-200 text-gray-800 hover:text-gray-900 transition-colors duration-300 flex items-center space-x-1 font-semibold rounded px-2 py-1">
+                      <i class='bx bx-check-circle'></i>
+                      <span class="text-sm">Complete</span>
+                    </button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center space-x-2">
+                      <i class='bx bx-edit'></i>
+                    </button>
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 flex items-center space-x-2">
+                      <i id="delete" class='bx bx-trash'></i>
+                    </button>
+                  </div>
+             </ul> -->
+
+            
+            </ul>
+            <div class="emptyToDo mt-16 p-4 text-2xl italic font-bold text-center text-gray-600 transition-opacity duration-300">There's No Task</div>
+    </div>
+</main>
+    <script src="../js/script.js"></script>
+</body>
+</html>
